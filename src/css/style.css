@@ -3,10 +3,12 @@ body {
 }
 
 nav {
-    widows: 100%;
+    width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
 }
+
 
 .logo {
     color: #fff;
@@ -14,6 +16,19 @@ nav {
     line-height: 60px;
     padding-left: 388px;
     float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
+}
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .menu {
@@ -28,11 +43,47 @@ nav {
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0;
+}
+
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.menu li:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.menu li:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.menu li:nth-child(6) {
+    animation-delay: 2s;
 }
 
 .main {
     width: 100%;
-    height: 1015px;
+    height: 1075px;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/fon_boy.jpg) center/cover no-repeat;
 }
 
@@ -41,6 +92,25 @@ nav {
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlmove 1s ease forwards;
+    -o-animation: titlmove 1s ease forwards;
+    animation: titlmove 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+@keyframes titlmove {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 404px;
+    }
 }
 
 .title__container h1 {
@@ -66,10 +136,48 @@ nav {
     margin: 58px 14px;
 }
 
+.title__container input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.title__container input:hover {
+    background: #344051;
+    color: white;
+}
+
+.title__container input:active {
+    transform: scale(1.1);
+}
+
+.menu li a {
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a:visited {
+    color: white;
+}
+
+.menu li a:hover {
+    color: #e88604;
+}
+
+.menu li a:active {
+    transform: scale(1.1);
+    color: #e88604;
+}
+
 .about {
     width: 100%;
     height: 719px;
     background: #fcfdfd;
+}
+
+title_cont_about {
+    text-align: center;
 }
 
 .title_cont_about h2 {
@@ -78,17 +186,55 @@ nav {
     font-weight: bold;
     padding-left: 897px;
     padding-top: 110px;
-
 }
 
 .line_about {
     padding-left: 915px;
     padding-top: 34px;
+    opacity: 0;
+    -webkit-animation: line 1s ease forwards;
+    -o-animation: line 1s ease forwards;
+    animation: line 1s ease forwards;
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2.s;
+}
+
+@keyframes line {
+    from {
+        opacity: 0;
+        margin-left: 700px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
 }
 
 .boy_about {
-    padding-left: 860px;
-    padding-top: 64px;
+    padding-left: 850px;
+    padding-top: 30px;
+    opacity: 0;
+    -webkit-animation: boy 1s ease forwards;
+    -o-animation: boy 1s ease forwards;
+    animation: boy 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+
+}
+
+@keyframes boy {
+    from {
+        opacity: 0;
+        margin-left: -700px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
 }
 
 .text_about1 {
@@ -96,6 +242,23 @@ nav {
     padding-top: 28px;
     text-align: center;
     color: #6f707e;
+    opacity: 0;
+    -webkit-animation: text_about1 2s ease forwards;
+    -o-animation: text_about1 2s ease forwards;
+    animation: text_about1 2s ease forwards;
+    -webkit-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+@keyframes text_about1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .text_about2 {
@@ -103,7 +266,25 @@ nav {
     padding-top: 44px;
     text-align: center;
     color: #6f707e;
+    opacity: 0;
+    -webkit-animation: text_about2 2s ease forwards;
+    -o-animation: text_about2 2s ease forwards;
+    animation: text_about2 2s ease forwards;
+    -webkit-animation-delay: 3.5s;
+    -o-animation-delay: 3.5s;
+    animation-delay: 3.5s;
 }
+
+@keyframes text_about2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 .input {
     padding-left: 870px;
@@ -116,14 +297,52 @@ nav {
     padding: 14px 28px;
     font-size: 16px;
     padding-right: 10px;
+    opacity: 0;
     background: #fcfdfd url(../img/button_about.png) 10px/auto no-repeat;
     border: 2px solid #6f707e;
+    -webkit-animation: button1 2s ease forwards;
+    -o-animation: button1 2s ease forwards;
+    animation: button1 2s ease forwards;
+    -webkit-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+@keyframes button1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.input button {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.input button:active {
+    color: white;
+    background-color: #344051;
+}
+
+.input button:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.input button {
+    transition: all 0.2s;
+    transform: scale(1);
 }
 
 .i_can {
     width: 100%;
     height: 519px;
     background: url(../img/fon_i_can.jpg) center/cover no-repeat;
+    background-attachment: fixed;
 
 }
 
@@ -133,6 +352,9 @@ nav {
     font-weight: bold;
     padding-left: 880px;
     padding-top: 108px;
+    -webkit-animation: i_can1 1s ease;
+    -o-animation: i_can1 1s ease;
+    animation: i_can1 1s ease;
 }
 
 .line_can {
@@ -145,6 +367,25 @@ nav {
     padding-top: 112px;
     float: left;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: computer 2s ease forwards;
+    -o-animation: computer 2s ease forwards;
+    animation: computer 2s ease forwards;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes computer {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .computer h3 {
@@ -163,7 +404,27 @@ nav {
     padding-left: 86px;
     padding-top: 107px;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: sign1 2.5s ease forwards;
+    -o-animation: sign1 2.5s ease forwards;
+    animation: sign1 2.5s ease forwards;
+    -webkit-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
+
+@keyframes sign1 {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
 
 .sign h3 {
     padding-top: 34px;
@@ -181,6 +442,25 @@ nav {
     padding-left: 86px;
     padding-top: 107px;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: sign1 3s ease forwards;
+    -o-animation: sign1 3s ease forwards;
+    animation: sign1 3s ease forwards;
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@keyframes rocket1 {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .rocket h3 {
@@ -199,6 +479,25 @@ nav {
     padding-left: 86px;
     padding-top: 107px;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: gramophone1 3.5s ease forwards;
+    -o-animation: gramophone1 3.5s ease forwards;
+    animation: gramophone1 3.5s ease forwards;
+    -webkit-animation-delay: 2.5s;
+    -o-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@keyframes gramophone1 {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .gramophone h3 {
@@ -305,7 +604,6 @@ nav {
     max-width: 888px;
     width: 100%;
     height: 40px;
-    position: relative;
     border: 2px solid #6d7682;
 
 }
@@ -328,7 +626,6 @@ nav {
     max-width: 888px;
     width: 100%;
     height: 40px;
-    position: relative;
     border: 2px solid #6d7682;
 }
 
@@ -351,7 +648,6 @@ nav {
     max-width: 888px;
     height: 40px;
     width: 100%;
-    position: relative;
     border: 2px solid #6d7682;
 }
 
@@ -378,8 +674,7 @@ nav {
     height: 500px;
     background: url(../img/statistic_fon.jpg);
     padding-top: 102px;
-
-
+    background-attachment: fixed;
 }
 
 .stat {
@@ -402,6 +697,26 @@ nav {
     padding-left: 438px;
     text-align: center;
     line-height: 32px;
+    opacity: 0;
+    -webkit-animation: client 1s ease forwards;
+    -o-animation: client 1s ease forwards;
+    animation: client 1s ease forwards;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+
+@keyframes client {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .work {
@@ -410,6 +725,25 @@ nav {
     padding-left: 154px;
     text-align: center;
     line-height: 32px;
+    opacity: 0;
+    -webkit-animation: work1 1s ease forwards;
+    -o-animation: work1 1s ease forwards;
+    animation: work1 1s ease forwards;
+    -webkit-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+@keyframes work1 {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .pro {
@@ -418,6 +752,25 @@ nav {
     padding-left: 150px;
     text-align: center;
     line-height: 32px;
+    opacity: 0;
+    -webkit-animation: pro1 1s ease forwards;
+    -o-animation: pro1 1s ease forwards;
+    animation: pro1 1s ease forwards;
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@keyframes pro1 {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .award {
@@ -426,6 +779,25 @@ nav {
     padding-left: 151px;
     text-align: center;
     line-height: 32px;
+    opacity: 0;
+    -webkit-animation: award1 1s ease forwards;
+    -o-animation: award1 1s ease forwards;
+    animation: award1 1s ease forwards;
+    -webkit-animation-delay: 2.5s;
+    -o-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@keyframes award1 {
+    from {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .title_review {
@@ -583,34 +955,78 @@ nav {
     padding-left: 0px;
     font-size: 15px;
     font-weight: bold;
-    background: url(../img/I%60M%20HERE2.png) center/auto no-repeat ,url(../img/im_here.jpg) center/auto no-repeat;
+    background: url(../img/I%60M%20HERE2.png) center/auto no-repeat, url(../img/im_here.jpg) center/auto no-repeat;
 }
 
-.footer1{
-    background: url(../img/footer.png) center/auto  no-repeat;
+.footer1 {
+    background: url(../img/footer.png) center/auto no-repeat;
     height: 91px;
     width: 100%;
 }
 
-.footer1 p{
+.footer1 p {
     text-align: center;
     padding-top: 41px;
     color: #fff;
     font-size: 15px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #ecebeb82;
+}
 
+.loader {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #eae4ea;
+  box-shadow: 0 -2px 2px rgba(0,0,0,.2);
+  border-bottom: 2px solid #6ddfca;
+  border-radius: 50%;
+  animation: loader 3s linear infinite;
+}
 
+.loader:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  border: 2px solid #eae4ea;
+  box-shadow: 0 -2px 2px rgba(0,0,0,.2);
+  border-bottom: 2px solid #d355be;
+  border-radius: 50%;
+  animation: loader 2s linear infinite;
+}
 
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  bottom: 22px;
+  right: 22px;
+  border: 2px solid #eae4ea;
+  box-shadow: 0 -2px 2px rgba(0,0,0,.2);
+  border-bottom: 2px solid #8c23ec;
+  border-radius: 50%;
+  animation: loader 1s linear infinite;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+@keyframes loader
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+  
+}
